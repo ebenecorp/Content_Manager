@@ -45,10 +45,16 @@
 
                         {{-- <input type="text" name="title" placeholder="Enter a title for your post"> --}}
                         <div class="form-group">
-                            {!! Form::submit('Update User', ['class'=>'btn btn-primary']) !!}
+                            {!! Form::submit('Update User', ['class'=>'btn btn-primary pull-left' ]) !!}
                         </div>
 
                         {!! Form::close() !!}
+
+                         {!! Form::open(['method'=>'DELETE', 'action'=>['AdminUserController@destroy', $user->id]]) !!}
+                                     <div class="form-group">
+                                         {!! Form::submit('Delete User', ['class'=>'btn btn-danger pull-right']) !!}
+                                     </div>
+                         {!! Form::close() !!}
 
                 </div>
         </div>

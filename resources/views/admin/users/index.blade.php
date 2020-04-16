@@ -4,6 +4,13 @@
 @section('content')
     <h1>Users</h1>
 
+            @if(Session::has('message'))
+            <div class="alert alert-success">
+               <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><span>
+                <i class="fa fa-check"></i> <strong> <h5>{{session('message')}}</h5> </strong></span>
+            </div>
+            @endif
+
          <div class="table-responsive">
              <table class="table">
                  <thead>
